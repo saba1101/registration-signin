@@ -1,0 +1,252 @@
+@import '../css/globals';
+@import '../css/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $mainFont;
+    outline: none;
+}
+
+body{
+    background-image: url(./materials/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.content{
+    @include fullSize;
+    @include flex;
+    justify-content: center;
+    position: relative;
+    .message-modal{
+        @include flex;
+        @include fullSize;
+        justify-content: center;
+        position: fixed;
+        background: #ffffff79;
+        backdrop-filter: blur(2px);
+        top: 0;
+        z-index: 2;
+        display: none;
+        .message{
+            width: 400px;
+            height: 180px;
+            background: #0e0f115d;
+            border-radius: 0px;
+            color: #ffffff;
+            border-radius: 10px;
+            position: relative;
+            h1{
+                width: 100%;
+                text-align: center;
+                background: indianred;
+                position: absolute;
+                top: 0;
+            }
+            p{
+                font-size: 17px;
+                position: absolute;
+                top: 80px;
+                width: 100%;
+                text-align: center;
+            }
+            button{
+                padding: 7px 15px;
+                background: #ffffff;
+                border:thin solid $secondaryColor;
+                border-radius: 50px;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%);
+                cursor: pointer;
+                transition: $transition;
+                &:hover{
+                    background: indianred;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .center-container{
+        width: $defWidth;
+        height: 600px;
+        background: #ffffffec;
+        backdrop-filter: blur(10px);
+        position: relative;
+        margin: auto;
+        @include flex;
+        justify-content: center;
+        overflow: hidden;
+        @include shadow;
+        animation : content 1.5s;
+        @keyframes content{
+            0%{opacity: 0};
+            100%{opacity: 1};
+        }
+        .image-holder, .login-container, .registration-container{
+            width: 500px;   
+            height: 100%;
+            position: relative;
+            i{
+                position: absolute;
+                top: 3%;
+                right: 5%;
+                font-size: 30px;
+                cursor: pointer;
+                color: $mainColor;
+                transition: $transition;
+            }
+        }
+        .login-container button i{
+            transform: rotate(180deg);
+        }
+        .image-holder{
+            background-image: url(./materials/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
+            @include defBg;
+            background-position: center;
+            background-color: #1b7694b9;
+            background-blend-mode: screen;
+            animation: imageAnimation 40s infinite;
+            animation-direction: alternate;
+            position: relative;
+            @keyframes imageAnimation {
+                from{background-position: center;}
+                to{background-position: right;}
+            }
+            h2{
+                font-size: 30px;
+                color: #ffffff;
+                @include absoluteCenter;
+                filter: drop-shadow(2px 2px 5px rgba(95, 158, 160, 0.59));
+            }
+        }
+        .login-container, .registration-container{
+            @include flex;
+            justify-content: center;
+            @include shadow;
+            .login-content, .register-content{
+                width: calc(100% - 100px);
+                height: calc(100% - 100px);
+                @include flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: flex-start;
+
+                form{
+                    @include flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 5px;
+                    label{
+                        margin: 5px;
+                        color:rgba(0, 0, 0, 0.309);
+                    }
+                    input,button{
+                        width: 300px;
+                        height: 35px;
+                        margin: 5px;
+                        border-radius: 20px;
+                        border: solid thin $secondaryColor;
+                        box-sizing: border-box;
+                        padding: 0px 15px;
+                        @include lighterShadow;
+                        font-size: 16px;
+                        font-weight: 600;
+                        transition: $transition;
+                        color: rgba(25, 23, 33, 0.645);
+                        &::placeholder{
+                            font-size: 13px;
+                            color: $secondaryColor;
+                        }
+                        &:focus{
+                            border: thin solid $hightlightTextColor;
+                        }
+                        &:nth-child(5){
+                            margin-top: 25px;
+                            border: none;
+                            background-color: $mainTextColor;
+                            color: #ffffff;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $hightlightTextColor;
+                            }
+                            &:focus{
+                                border: none;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                    p{
+                        margin: 5px;
+                        color: rgba(0, 0, 0, 0.529);
+                        a{
+                            color: $hightlightTextColor;
+                            text-decoration: none;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+            .login-content-header, .register-content-header{
+                h2{
+                    color: $mainColor;
+                }
+                p{
+                    color: rgba(0, 0, 0, 0.529);
+                    margin-top: 5px;
+                }
+            }
+            .login-content-footer, .register-content-footer{
+                h3{
+                    color: $mainColor
+                }
+                p{
+                    margin-top: 5px;
+                    color: rgba(0, 0, 0, 0.529);
+                }
+            }
+        }
+        .registration-container{
+            display: none;
+            #register-form #password-info{
+                position: absolute;
+                right: 150px;
+                top: 265px;
+                background: $hightlightTextColor;
+                padding: 5px;
+                color: #ffffff;
+                opacity: 0;
+                pointer-events: none;
+                transition: $transition;
+            }
+        }
+        #register-submit{
+            border: none;
+            color: #ffffff;
+            background-color: rgb(123, 186, 123);
+            cursor: pointer;
+            margin-top: 15px;
+            &:hover{
+                background-color: palegreen;
+            }
+        }
+        .login-container,.registration-container{
+            animation: slide 1s;
+            @keyframes slide{
+                0%{transform: translateX(400px);}
+                100%{transform: translateX(0px);}
+            }
+        }
+    }
+}
+
+
+// validation class
+
+#register-form input.error{
+    border: thin solid $error;
+}

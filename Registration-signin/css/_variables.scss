@@ -1,0 +1,39 @@
+$mainColor: #2F58FF;
+$secondaryColor: #DCE0E2;
+$mainTextColor: #2b3a61c5;
+$hightlightTextColor: #8DA6FF;
+
+$secondaryTextSize: 15px;
+$mainTextSize: 19px;
+
+$defWidth: 1000px;
+$defHeigth: 600px;
+
+$transition: ease-in-out .5s;
+
+$error: rgba(205, 92, 92, 0.822);
+
+
+@mixin fullSize(){
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin defBg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin absoluteCenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+}
+
+@mixin shadow{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.159);
+}
+@mixin lighterShadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.118);
+}

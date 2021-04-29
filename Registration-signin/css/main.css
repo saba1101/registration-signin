@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  outline: none;
+}
+
+body {
+  background-image: url(./materials/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.content .message-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  background: #ffffff79;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+
+.content .message-modal .message {
+  width: 400px;
+  height: 180px;
+  background: #0e0f115d;
+  border-radius: 0px;
+  color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.content .message-modal .message h1 {
+  width: 100%;
+  text-align: center;
+  background: indianred;
+  position: absolute;
+  top: 0;
+}
+
+.content .message-modal .message p {
+  font-size: 17px;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.content .message-modal .message button {
+  padding: 7px 15px;
+  background: #ffffff;
+  border: thin solid #DCE0E2;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  cursor: pointer;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.content .message-modal .message button:hover {
+  background: indianred;
+  color: #ffffff;
+}
+
+.content .center-container {
+  width: 1000px;
+  height: 600px;
+  background: #ffffffec;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: relative;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.159);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.159);
+  -webkit-animation: content 1.5s;
+          animation: content 1.5s;
+}
+
+@-webkit-keyframes content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.content .center-container .image-holder, .content .center-container .login-container, .content .center-container .registration-container {
+  width: 500px;
+  height: 100%;
+  position: relative;
+}
+
+.content .center-container .image-holder i, .content .center-container .login-container i, .content .center-container .registration-container i {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  font-size: 30px;
+  cursor: pointer;
+  color: #2F58FF;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.content .center-container .login-container button i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.content .center-container .image-holder {
+  background-image: url(./materials/brooke-cagle-UkIDyeiD-zI-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1b7694b9;
+  background-blend-mode: screen;
+  -webkit-animation: imageAnimation 40s infinite;
+          animation: imageAnimation 40s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  position: relative;
+}
+
+@-webkit-keyframes imageAnimation {
+  from {
+    background-position: center;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+@keyframes imageAnimation {
+  from {
+    background-position: center;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.content .center-container .image-holder h2 {
+  font-size: 30px;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(2px 2px 5px rgba(95, 158, 160, 0.59));
+          filter: drop-shadow(2px 2px 5px rgba(95, 158, 160, 0.59));
+}
+
+.content .center-container .login-container, .content .center-container .registration-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.159);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.159);
+}
+
+.content .center-container .login-container .login-content, .content .center-container .login-container .register-content, .content .center-container .registration-container .login-content, .content .center-container .registration-container .register-content {
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.content .center-container .login-container .login-content form, .content .center-container .login-container .register-content form, .content .center-container .registration-container .login-content form, .content .center-container .registration-container .register-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5px;
+}
+
+.content .center-container .login-container .login-content form label, .content .center-container .login-container .register-content form label, .content .center-container .registration-container .login-content form label, .content .center-container .registration-container .register-content form label {
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.309);
+}
+
+.content .center-container .login-container .login-content form input, .content .center-container .login-container .login-content form button, .content .center-container .login-container .register-content form input, .content .center-container .login-container .register-content form button, .content .center-container .registration-container .login-content form input, .content .center-container .registration-container .login-content form button, .content .center-container .registration-container .register-content form input, .content .center-container .registration-container .register-content form button {
+  width: 300px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 20px;
+  border: solid thin #DCE0E2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 15px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.118);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.118);
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  color: rgba(25, 23, 33, 0.645);
+}
+
+.content .center-container .login-container .login-content form input::-webkit-input-placeholder, .content .center-container .login-container .login-content form button::-webkit-input-placeholder, .content .center-container .login-container .register-content form input::-webkit-input-placeholder, .content .center-container .login-container .register-content form button::-webkit-input-placeholder, .content .center-container .registration-container .login-content form input::-webkit-input-placeholder, .content .center-container .registration-container .login-content form button::-webkit-input-placeholder, .content .center-container .registration-container .register-content form input::-webkit-input-placeholder, .content .center-container .registration-container .register-content form button::-webkit-input-placeholder {
+  font-size: 13px;
+  color: #DCE0E2;
+}
+
+.content .center-container .login-container .login-content form input:-ms-input-placeholder, .content .center-container .login-container .login-content form button:-ms-input-placeholder, .content .center-container .login-container .register-content form input:-ms-input-placeholder, .content .center-container .login-container .register-content form button:-ms-input-placeholder, .content .center-container .registration-container .login-content form input:-ms-input-placeholder, .content .center-container .registration-container .login-content form button:-ms-input-placeholder, .content .center-container .registration-container .register-content form input:-ms-input-placeholder, .content .center-container .registration-container .register-content form button:-ms-input-placeholder {
+  font-size: 13px;
+  color: #DCE0E2;
+}
+
+.content .center-container .login-container .login-content form input::-ms-input-placeholder, .content .center-container .login-container .login-content form button::-ms-input-placeholder, .content .center-container .login-container .register-content form input::-ms-input-placeholder, .content .center-container .login-container .register-content form button::-ms-input-placeholder, .content .center-container .registration-container .login-content form input::-ms-input-placeholder, .content .center-container .registration-container .login-content form button::-ms-input-placeholder, .content .center-container .registration-container .register-content form input::-ms-input-placeholder, .content .center-container .registration-container .register-content form button::-ms-input-placeholder {
+  font-size: 13px;
+  color: #DCE0E2;
+}
+
+.content .center-container .login-container .login-content form input::placeholder, .content .center-container .login-container .login-content form button::placeholder, .content .center-container .login-container .register-content form input::placeholder, .content .center-container .login-container .register-content form button::placeholder, .content .center-container .registration-container .login-content form input::placeholder, .content .center-container .registration-container .login-content form button::placeholder, .content .center-container .registration-container .register-content form input::placeholder, .content .center-container .registration-container .register-content form button::placeholder {
+  font-size: 13px;
+  color: #DCE0E2;
+}
+
+.content .center-container .login-container .login-content form input:focus, .content .center-container .login-container .login-content form button:focus, .content .center-container .login-container .register-content form input:focus, .content .center-container .login-container .register-content form button:focus, .content .center-container .registration-container .login-content form input:focus, .content .center-container .registration-container .login-content form button:focus, .content .center-container .registration-container .register-content form input:focus, .content .center-container .registration-container .register-content form button:focus {
+  border: thin solid #8DA6FF;
+}
+
+.content .center-container .login-container .login-content form input:nth-child(5), .content .center-container .login-container .login-content form button:nth-child(5), .content .center-container .login-container .register-content form input:nth-child(5), .content .center-container .login-container .register-content form button:nth-child(5), .content .center-container .registration-container .login-content form input:nth-child(5), .content .center-container .registration-container .login-content form button:nth-child(5), .content .center-container .registration-container .register-content form input:nth-child(5), .content .center-container .registration-container .register-content form button:nth-child(5) {
+  margin-top: 25px;
+  border: none;
+  background-color: #2b3a61c5;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.content .center-container .login-container .login-content form input:nth-child(5):hover, .content .center-container .login-container .login-content form button:nth-child(5):hover, .content .center-container .login-container .register-content form input:nth-child(5):hover, .content .center-container .login-container .register-content form button:nth-child(5):hover, .content .center-container .registration-container .login-content form input:nth-child(5):hover, .content .center-container .registration-container .login-content form button:nth-child(5):hover, .content .center-container .registration-container .register-content form input:nth-child(5):hover, .content .center-container .registration-container .register-content form button:nth-child(5):hover {
+  background-color: #8DA6FF;
+}
+
+.content .center-container .login-container .login-content form input:nth-child(5):focus, .content .center-container .login-container .login-content form button:nth-child(5):focus, .content .center-container .login-container .register-content form input:nth-child(5):focus, .content .center-container .login-container .register-content form button:nth-child(5):focus, .content .center-container .registration-container .login-content form input:nth-child(5):focus, .content .center-container .registration-container .login-content form button:nth-child(5):focus, .content .center-container .registration-container .register-content form input:nth-child(5):focus, .content .center-container .registration-container .register-content form button:nth-child(5):focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.content .center-container .login-container .login-content form p, .content .center-container .login-container .register-content form p, .content .center-container .registration-container .login-content form p, .content .center-container .registration-container .register-content form p {
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.529);
+}
+
+.content .center-container .login-container .login-content form p a, .content .center-container .login-container .register-content form p a, .content .center-container .registration-container .login-content form p a, .content .center-container .registration-container .register-content form p a {
+  color: #8DA6FF;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.content .center-container .login-container .login-content-header h2, .content .center-container .login-container .register-content-header h2, .content .center-container .registration-container .login-content-header h2, .content .center-container .registration-container .register-content-header h2 {
+  color: #2F58FF;
+}
+
+.content .center-container .login-container .login-content-header p, .content .center-container .login-container .register-content-header p, .content .center-container .registration-container .login-content-header p, .content .center-container .registration-container .register-content-header p {
+  color: rgba(0, 0, 0, 0.529);
+  margin-top: 5px;
+}
+
+.content .center-container .login-container .login-content-footer h3, .content .center-container .login-container .register-content-footer h3, .content .center-container .registration-container .login-content-footer h3, .content .center-container .registration-container .register-content-footer h3 {
+  color: #2F58FF;
+}
+
+.content .center-container .login-container .login-content-footer p, .content .center-container .login-container .register-content-footer p, .content .center-container .registration-container .login-content-footer p, .content .center-container .registration-container .register-content-footer p {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.529);
+}
+
+.content .center-container .registration-container {
+  display: none;
+}
+
+.content .center-container .registration-container #register-form #password-info {
+  position: absolute;
+  right: 150px;
+  top: 265px;
+  background: #8DA6FF;
+  padding: 5px;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.content .center-container #register-submit {
+  border: none;
+  color: #ffffff;
+  background-color: #7bba7b;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.content .center-container #register-submit:hover {
+  background-color: palegreen;
+}
+
+.content .center-container .login-container, .content .center-container .registration-container {
+  -webkit-animation: slide 1s;
+          animation: slide 1s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+#register-form input.error {
+  border: thin solid rgba(205, 92, 92, 0.822);
+}
+/*# sourceMappingURL=main.css.map */

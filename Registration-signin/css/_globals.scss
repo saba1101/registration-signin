@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+$mainFont:'Lato', sans-serif;
+
+@mixin NoDefStyleList(){
+    ul{
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+@mixin NoDefBtn(){
+    button{
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@mixin flex (){
+    display: flex;
+    align-items: center;
+}
